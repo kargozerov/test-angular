@@ -1,10 +1,6 @@
 <mat-form-field appearance="fill">
   <mat-label>Input</mat-label>
-  <input matInput #username>
+  <input matInput>
 </mat-form-field>
 
-<ng-container *ngIf="(userList$ | async) as userList">
-  <ng-container *ngFor="let user of userList.items">
-    <app-user-card [user]="user"></app-user-card>
-  </ng-container>
-</ng-container>
+<app-user-card></app-user-card>
